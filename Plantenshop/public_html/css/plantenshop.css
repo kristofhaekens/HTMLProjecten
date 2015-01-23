@@ -1,0 +1,315 @@
+@charset "utf-8";
+/*
+CSS voor Plantenshop, een Responsive, Mobile First oefening
+*/
+/******* ALGEMEEN + MOBILE FIRST ********/
+body, div, article, section {
+    margin:0;
+    padding:0;
+}
+body {
+    font: 16px/1.4 "Lucida Grande", Sans-Serif; /* 1em = 16px */
+    color:#333333;
+}
+a {
+    text-decoration:none;
+    color:inherit;
+}
+h1, h2 {
+    font-size: 1.125em; /* 18px */
+    padding: 0 0.3333em; /* 6px */
+}
+header {
+    position:relative;
+}
+section {
+    clear:both;
+}
+p {
+    margin-left:0.375em; /* 6px */
+}
+.container {
+    overflow:auto;
+}
+/* kop phone: titel bovenaan met lijn eronder */
+header h1 {
+    margin:0.2222em; /* 4px */
+}
+#kopnav {
+    border-top:1px solid gray;
+    padding-top:0.6em;
+    margin:0;
+}
+/**************** hoofdmenu mobile first**************************/
+/*
+vertikaal menu
+container bepaalt breedte van list */
+#hoofdmenu {
+    list-style: none; /*wat voor listitems */
+    font-size: 0.875em; /* 14px = 1em */
+    font-weight: bold;
+    padding: 0; /* 0.5em = 6px */
+    margin: 0 1em;
+    width:auto;
+}
+#hoofdmenu li {
+    display:block; /* onder elkaar */
+    margin:0;
+    padding: 0.4286em 1.1428em; /* 6px 16px */
+    border-bottom:1px solid silver;
+    border-left:1px solid silver;
+    border-right:1px solid silver;
+}
+#hoofdmenu li:first-child {
+    border-top:1px solid silver;
+}
+#hoofdmenu a {
+    display: inline;
+    cursor: pointer;
+}
+#hoofdmenu li:hover {
+    color:white;
+    background-color:darkseagreen;
+}
+/* helper classes */
+.phone-only {
+    display:block
+}
+.klein-tablet {
+    display:none
+}
+.groter-tablet {
+    display:none
+}
+.desktop{
+    display:none
+}
+/***** thumbnaillist mobile first **********/
+/* mobile: bullets enkele titel geen foto, geen tekst */
+.thumbnaillist {
+    list-style-type: none;
+    font-size: 0.9em; /* 12px = 1em */
+    width: 100%;
+    margin: 0;
+    padding: 0.5em 0; /* 0.5em = 6px */
+    background: lavender;
+}
+.thumbnaillist li {
+    padding: 0 0 0.9em 3em;
+    margin: 0.5em;
+    background: transparent url(img/flower.png) 0 0 no-repeat;
+}
+.thumbnaillist h4 {
+    font-size: 1.125em; /* 18px */
+    color: white;
+    margin: 0;
+    padding-top: 0.2em;
+}
+.thumbnaillist img {
+    display:none;
+}
+/* TABLETS */
+@media screen and (min-width:361px) {
+    /* helper classes */
+    .phone-only { display:none; }
+    .klein-tablet { display:block; }
+    .groter-tablet { display:none; }
+    .desktop { display:none; }
+    /********* TABLET LAY-OUT***********/
+    /*
+    hoofdmenu bovenaan
+    3 items naast elkaar: totaal = 26.8% + 3% + 1px border
+    grotere header, titel onder menu
+    toon figuren in de list, met titels
+    */
+    .container {
+        width: 94%;
+        margin: 0 auto;
+    }
+    header {
+        height: 10em; /* 160px */
+        background: darkseagreen;
+    }
+    header h1 {
+        font-size: 2em; /* 32px = 1em */
+        position: absolute; /*voor plaatsing onder menu*/
+        top: 3.5em; /* 96px */
+        left: 0;
+        margin: 0 0.5em; /* 16px */
+    }
+    #kopnav {
+        border: none;
+        padding: 0;
+    }
+    #inhoud h2 {
+        font-size: 1.25em; /* 20px */
+        padding: 0;
+    }
+    /*hoofdmenu*/
+    #hoofdmenu {
+        margin: 0;
+        overflow: visible;
+    }
+    #hoofdmenu li {
+        font-size: 1.2em; /* 20px = 1em */
+        width: 26.8%;
+        float: left;
+        border-top: none;
+        border-left: none;
+        border-bottom: 1px solid darkslategray;
+        border-right: 1px solid darkslategray;
+        padding: 0.8em 3%;
+    }
+    #hoofdmenu li:first-child, #hoofdmenu li:nth-child(4) {
+        border-top: none;
+        border-left: 1px solid darkslategray;
+    }
+    #hoofdmenu li:hover {
+        color: white;
+        background-color: darkslategray;
+    } 
+    /* thumblist tablet
+geen bullet, image zichtbaar, titel bovenop beeld, eerste tekst zichtbaar
+    */
+    .thumbnaillist li {
+        position: relative; /*om absolute children h4 titels te plaatsen, als dit niet komen ze boven elkaar 0.2em bottom en left van container, 
+                            als dit er wel staat, komen ze op die afstanden van hun eigen deeltje*/
+        background: none;
+        border: none;
+        padding: 1%; /* 6px */
+        margin: 1%;
+        overflow: hidden;
+        height: 6.3333em; /* 80px */
+    }
+    .thumbnaillist h4 {
+        position:absolute;
+        bottom:0.2em;
+        left:0.2em;
+        display: block;
+        margin-left: 0.4em;
+        color:#00FFFF;
+        width:38%; /* wrap titels */
+    }
+    .thumbnaillist img {
+        display: inline-block; /* moet specifiek hier want eerder img uitgeschakeld voor basisversie*/
+        float: left; /*anders komt tekst eronder ipv ernaast en door beperkte height van li-elementen is er geen tekst te zien*/
+        margin-right: 0.5em;
+        max-width: 40%;
+        min-width: 10em;
+    }
+    .thumbnaillist p{
+        margin:0;
+    }
+}
+@media screen and (min-width : 600px) {
+    /********* grotere TABLET ***********/
+    /* helper classes */
+    .phone-only { display:none; }
+    .klein-tablet { display:block; }
+    .groter-tablet { display:block; }
+    .desktop { display:none; }
+}
+@media screen and (min-width : 800px) {
+    /********* DESKTOP ***********/
+    /*
+    Titel bovenaan
+    alle items naast elkaar: totaal = + border
+    grotere header, titel onder menu
+    */
+    .phone-only {display:none; }
+    .klein-tablet {display:block;}
+    .groter-tablet {display:block;}
+    .desktop {display:block;}
+    /******* DESKTOP LAY-OUT ************/
+    .container {
+        width:80%;
+        max-width:1000px;
+        margin: 0 auto; /* 16px */ /* om kolom te centreren, zeker op grote schermen*/
+        position:relative; /*om eventuele kinderen absoluut te kunnen plaatsen*/
+        height: 100%; /* moet header vullen - nodig om menu correct te plaatsen */
+    }
+    header {
+        height:10em; /* 160px */
+    }
+    header h1 {
+        font-size:2.5em; /* 32px = 1em */
+        margin:0;
+        position: static; /*terug static (aka normaal) maken voor desktop*/
+    }
+    #inhoud h2 {
+        font-size: 1.375em; /* 22px */
+    }
+    #kopnav {
+        width:100%;
+        position:absolute;
+        bottom:0;
+        left:0;
+    }
+    /* twee kol layout 25 + 72 = 99 */
+    aside { /* 25 + 2 = 27 */
+        float:left;
+        width: 25%;
+        padding:0 1%;
+    }
+    .kolom { /*72 = 72 */
+        float:left;
+        width: 72%;
+        padding: 0 0 1em 0;
+    }
+    p {margin:0;}
+    #hoofdmenu li {
+        width: 16.4%;
+        padding:0.3em 0;
+        border-top: 1px solid LavenderBlush;
+        border-right: 1px solid LavenderBlush;
+        border-bottom: none;
+        border-left: none;
+        text-align: center;
+    }
+    #hoofdmenu li:nth-child(1n+0) {
+        width:16.4%;
+        padding:0.3em 0;
+        border-top:1px solid LavenderBlush;
+        border-right:1px solid LavenderBlush;
+        border-bottom:none;
+        border-left:none;
+        text-align:center;
+    }
+    #hoofdmenu li:first-child {
+        border-left:1px solid LavenderBlush;
+    }
+    /*GROEPEN*/
+    .thumbnaillist {
+        padding:0;
+        overflow:auto;
+    }
+    .thumbnaillist li {
+        float:left;
+        width: 48%; /* 2 naast elkaar*/
+        height:36em;
+        padding:0;
+    }
+    .thumbnaillist h4 {
+        position: static; /*om eerdere instelling tot absolute ongedaan te maken voor desktops - static betekent terug naar normaal box-model*/
+        color: darkgreen;
+        margin:0;
+        padding:5px 0 0 0;
+        width:100%; /*om eerdere instellingen te overschrijven*/
+    }
+    .thumbnaillist img {
+        float:none; /* tevoren left, nu niet meer zodat tekst onder foto blijft*/
+        margin: 0;
+        max-width:90%;
+        border:5px solid snow;
+        border-radius:0.2em;
+    }
+    /******** voor heel grote schermen *********/
+    @media screen and (min-width:960px) {
+        .thumbnaillist li {
+            width: 31%; /* 3 naast elkaar*/
+        }
+        .thumbnaillist img {
+            max-width:95%;
+        }
+    }
+}

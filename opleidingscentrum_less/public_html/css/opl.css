@@ -1,0 +1,86 @@
+@charset "utf-8";
+@import "normalize.css";
+/* LESS Document */
+/* TYPOGRAFIE */
+/* alineas */
+p {
+    margin: 0 0 0.5625em;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    line-height: 1.125em;
+}
+p .rood {
+    color: #c53a2f;
+}
+/* headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-family: inherit;
+    font-weight: bold;
+    color: inherit;
+}
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+    font-weight: normal;
+    line-height: 1;
+    color: #999999;
+}
+h1 {
+    font-size: 200%;
+    line-height: 2.25em;
+}
+h2 {
+    font-size: 160%;
+    line-height: 2.25em;
+}
+/* lists */
+ul,
+ol {
+    padding: 0;
+    margin: 0 0 0.5625em 25px;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+    margin-bottom: 0;
+}
+ul {
+    list-style: disc;
+}
+ol {
+    list-style: decimal;
+}
+li {
+    line-height: 1.125em;
+}
+/* andere */
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+    color: #f89406;
+}
+small {
+    font-size: 98%;
+    color: #999999;
+}
+/* hyperlinks */
+a {
+    color: #0088cc;
+}
+a:hover,
+a:active {
+    text-decoration: none;
+    color: #005580;
+}

@@ -1,0 +1,56 @@
+/*************NORMALIZE***********/
+html, body, div, section, article, aside, nav {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: none;
+    float: left;
+    margin: 0 1.4em 0.5em 0;
+}
+/************ SPECIALS ************/
+.cf {
+    clear:both;
+}
+.clearFix:before, .clearFix:after {
+    content: " ";
+    display: table;
+}
+.clearFix:after {
+    clear: both;
+}
+/* enkel voor IE6/7  */ 
+.clearFix {
+    *zoom: 1;
+}
+/******* ALGEMEEN + MOBILE FIRST ********/
+em {
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: 0.15em;
+}
+/* TYPOGRAFIE */
+#inhoud {
+    font-family: Arial;
+    line-height: 150%;
+}
+
+/* KLEUR */
+
+
+/* STRUCTUUR */
+
+/* MENUBALK */ 
+
+
+
+
+/************* TABLETS *************/
+@media screen and (min-width:400px) {
+}
+
+
+/*********** DESKTOPS ************/
+@media screen and (min-width : 800px) {
+}

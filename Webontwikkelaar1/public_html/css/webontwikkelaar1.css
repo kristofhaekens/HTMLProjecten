@@ -1,0 +1,305 @@
+@charset "utf-8";
+/* CSS Document voor webontwikkelaar oefening
+
+        deel1: structuur aanbrengen en fluid layout, kolommen
+        
+*/
+
+
+/*************NORMALIZE***********/
+
+html, body, div, section, article, aside, nav {
+    margin:0;
+    padding:0;
+}
+img {
+    border:none;
+    float:left;
+    margin: 0 1.25em 0.5em 0;
+}
+
+/***********TYPOGRAFIE***********/
+
+/*algemeen*/
+
+body {
+    font-family:Verdana, Geneva, sans-serif;
+    font-size:100%;				/*16px*/
+    line-height:1.5em; 			/*24px*/
+}
+h1 {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size:3.75em;			/*60px*/
+}
+a, a:visited, a:hover, a:active {
+    text-decoration:none;
+    font-weight:bold;
+}
+em {
+    font-style:normal;
+    font-weight:bold;
+}
+code {
+    font-family: Courier, monospace;
+    font-size:1.25em;			/*18px*/
+}
+time {
+    font-size:0.75em;			/*12px*/
+}
+/* structuurelementen */
+.intro p {
+    font-size:1.125em;			/*18px*/
+}
+.intro h2 {
+    font-size:1.5em;			/*24px*/
+    font-family:Verdana, Geneva, sans-serif; 
+    font-style:italic;
+}
+.disclaimer {
+    font-family: Verdana, Geneva, sans-serif;
+    font-style:italic;
+}
+
+/*************KLEUREN, BORDERS, HOEKEN****************/
+
+/*
+        tekstkleur: 		#665950	
+        linkKleur: 		#4C86CF
+        linkHover: 		#058
+        achtergrondBleek:  	#FCFAF8
+        achtergrondDonker: 	#EBE8E5
+        achtergrondGroen: 	#8FB209
+        borderGrijs: 		#dcdad8
+        headingGroen: 		#7ea107
+        headingDonker: 		#52463f
+        headingPaars: 		#9A3098
+        code: 			#8B1C00
+        img border: 		#E9DCE9
+*/
+
+
+/*algemeen*/
+body {
+    color:#665950;
+    background:#FCFAF8;
+}
+h1 {
+    color:#7EA107;
+}
+h2, h3, h4, h5, h6 {
+    color:#52463F;
+}
+.intro h2 {
+    color:#7EA107;
+}
+/*afscheiding - waar te vinden?*/
+/*h2.afscheiding {
+        border-top :1px dotted #CCCAC8;
+        padding-top:1em;
+}*/
+/*paars - waar te vinden? staat al bij emphasis*/
+/*.paars {
+        color:#9A3098;
+}*/
+a, a:visited {
+    color:#4C86CF;
+}
+a:hover, a:active {
+    color:#058;
+}
+em {
+    color:#9A3098;
+}
+code {
+    color:#8B1C00;
+}
+/* structuurelementen */
+header {
+    	/* box-shadow: inset 0px 2px 4px rgba(220, 218, 216, 0.75);
+    */}
+.top {
+    background:#8FB209;
+}
+.top form {
+    color:white;
+}
+/*Hoe is aanmelden knop donkergroen? zie .top form input*/
+section {
+    border-top:1px solid #DCDAD8;
+    border-bottom:1px solid #DCDAD8;
+}
+.licht {
+    background:#FCFAF8;
+}
+.donker {
+    background:#EBE8E5;
+}
+
+/*************STRUCTUUR****************/
+
+.inhoud {
+    margin: 0 auto;
+    width: 80%;
+    max-width:78em;
+    position: relative;
+    clear: both;
+}
+.inhoud h2 {
+    margin:1.6em 0 1em 0;
+}
+/*top*/
+.top form {
+    float:right;
+}
+/*logo*/
+#logo {
+    float:left;
+    margin:1em 0 0.5em 0;
+}
+/*intro*/
+.intro {
+    clear:left;
+    padding: 1em 0;
+}
+
+/**************KOLOMMEN: 3 kols systeem*************/
+
+.kolommen {
+    /*container */
+    clear:both;
+    margin-bottom: 2em;
+}
+.kolom {
+    float:left;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+
+    overflow:visible;
+    margin: 0;
+    padding:0;
+}
+.span1 {
+    width:33.333%;
+    padding-right:3%;
+}	/* 1/3 + gutter rechts*/
+.span2 {
+    width:66.666%;
+    padding-right:3%;
+}
+.span3 {
+    width:100%;
+}
+.kolom:last-child {
+    padding-right:0; /*  geen gutter laatste kolom */
+}
+
+/*********** LIJSTEN  ****************/
+
+/* ul infoblokjes*/
+ul.infoblokjes {
+    font-size:0.875em;
+    list-style:square;
+    list-style-image:url(../../img/check.png);
+    margin-left:-2%;
+    margin-bottom: 2em;
+}
+ul.infoblokjes li {
+    float:left;
+    width:29%;
+    padding: 0 0 0 1%;
+    margin: 0.6em 1.5% 0 1.5%;
+    /*min-height:9em;*/
+}
+
+/*******************ARTICLES*********************/
+
+article h3 {
+    margin-top:0.1em;
+}
+
+/*****************HOOFDMENU**************************/
+
+#hoofdmenu {
+    float:right;
+    margin-top:70px;
+}
+#hoofdmenu ul {
+    list-style-type:none;
+}
+#hoofdmenu ul li {
+    float:left;
+    display:inline;
+}
+#hoofdmenu a {
+    font-weight:bold;
+    color:#6C6A68;
+    text-align:center;
+    display:inline-block;
+    padding-left:1em;
+    padding-right:1em;
+    border-right:1px solid #ECEAE8;
+}
+#hoofdmenu li:last-child a {
+    border-right:none;
+}
+#hoofdmenu li.huidig a {
+    color:#4C4A48;
+}
+#hoofdmenu a:hover {
+    color:#2B518A;
+}
+
+/************** FIGUREN ***************/
+
+/*images in bepaalde  secties */
+#intro img {
+    margin-top:0;
+    margin-right:0;
+}
+#waarom img {
+    margin-top:-4em;
+    margin-right:2em;
+}
+#nieuws img {
+}
+
+/************PURE OPMAAK CLASSES ***************/
+
+.rand {
+    border:8px solid #E9DCE9;
+}
+.vlotRechts {
+    float:right;
+}
+
+/**************** FORMS *******************/
+
+.top form input[type=submit] {
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    width: auto;
+    background-color: #6D9207;
+    border: 1px solid #047B00;
+    padding: 0.2em 1em;
+    overflow: visible;
+}
+
+
+/****************SPECIALS*********************/
+
+.cf {
+    clear:both;
+}
+.clearFix:before, .clearFix:after {
+    content: " ";
+    display: table;
+}
+.clearFix:after {
+    clear: both;
+}
+/* enkel voor IE6/7  */ 
+.clearFix {
+    *zoom: 1;
+}

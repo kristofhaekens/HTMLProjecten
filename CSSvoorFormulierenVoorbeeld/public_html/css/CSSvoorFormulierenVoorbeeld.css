@@ -1,0 +1,89 @@
+form {
+font-size:1em;
+color: #333;
+margin:0;
+padding:0;
+outline:1px dashed red;
+}
+form *{
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+box-sizing:border-box;
+}
+input[type=submit], input[type=reset], input[type=button], button{
+padding:0.5em 1em;
+font-size:1.1em;
+color:#CC0033;
+}
+form div {
+position: relative;
+clear: left;
+display: block;
+zoom: 1;
+margin: 0.2em 0;
+padding: 0;
+}
+/******* velden, controls *******/
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="url"],
+input[type="search"],
+input[type="number"],
+input[type="date"],
+input[type="tel"],
+textarea {
+width: 19.7em;
+min-height: 1em;
+padding: 0.4em 0.5em;
+margin: 0;
+font-size: inherit;
+}
+/****** labels en berichten *****/
+label{
+/* algemeen, losse labels */
+float: none;
+display: inline;
+min-height: 0.875em;
+padding: 0.3em 0 ;
+margin: 0;
+font-size: 1em;
+text-align: left;
+}
+form div label {
+/* labels in div */
+float: left;
+font-size: 1em;
+display: inline-block;
+width: 10em;
+margin: 0;
+padding-right:1em;
+text-align: right;
+}
+form div label.fieldval {
+/* veld gebonden berichten */
+display: inline-block;
+float: right;
+width: 10em;
+color: red;
+font-style: italic;
+text-align: left;
+padding-left: 1em;
+}
+input.kort { width:7em;}
+input[type="checkbox"], input[type="radio"] {
+padding: 0;
+margin: 0.4em 0.5em;
+}
+form label.labelCheckbox, label.labelRadio {
+float: none;
+display: inline;
+zoom: 1;
+padding: 0;
+text-align: left;
+}
+div.controlbox {
+width: 19.7em;
+display: inline-block;
+}
+input[type="checkbox"].inline, input[type="radio"].inline { margin:0; }

@@ -1,0 +1,78 @@
+/* TYPOGRAFIE */
+body {
+    font-family: Arial;
+    line-height: 1.5em;
+}
+h1 {
+    font-size: 100px;
+}
+
+.inhoud h3 {
+    font-style: italic;
+}
+footer {
+    font-size: 1.5em;
+}
+/* KLEUR */
+h2 {
+    color: aqua;
+}
+em {
+    color: #ff33cc;
+    font-style: normal;
+    font-weight: bold;
+}
+body {
+    background-color: #006666;
+    color: white;
+}
+section {
+    border-top: 1px solid aqua;
+    border-bottom: 1px solid aqua;
+}
+table {
+    background-color: #006666;
+    color: black;
+    border-collapse: separate;
+    border-spacing: 0.5em;
+}
+table th {
+    background-color: aqua;
+
+}
+table td {
+    background-color: white;
+}
+strong {
+    background-color: yellow;
+    padding-left:0.5em;
+    padding-right:0.5em;
+    color: black;
+}
+/* STRUCTUUR */
+header, footer, body>div {
+    width:90%;
+    margin: 0 auto;
+}
+footer p {
+    text-align: center;
+}
+#temperatuur img {
+    float: left;
+    margin-right: 1em;
+}
+table {
+    margin-bottom: 1em;
+}
+tr>th {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+tr>td {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+tr>td:first-child {
+    padding-left: 0;
+    text-align: center;
+}

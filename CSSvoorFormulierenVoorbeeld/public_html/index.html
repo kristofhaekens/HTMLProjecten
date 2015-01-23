@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/CSSvoorFormulierenVoorbeeld.css"  />
+    </head>
+    <body>
+        <div>
+            <label><input name="partnersexe" type="radio" value="m" />mannen</label>
+            <label><input name="partnersexe" type="radio" value="v" />vrouwen</label>
+            <label><input name="partnersexe" type="radio" value="b" />beide</label>
+        </div>
+        <div>
+            <label for="voornaam">voornaam</label>
+            <input type="text" name="voornaam" id="voornaam"/>
+        </div>
+        <div>
+            <label for="vnaam" class="verplicht" title="verplicht">naam:</label>
+            <input type="text" id="naam" name="naam" placeholder="uw naam" title="vul hier uw naam in " required>
+            <label class="fieldval" id="val_naam">vul uw naam in</label>
+        </div>
+        <div>
+            <label for="postnr" class="verplicht" >Postnummer:</label>
+            <input type="number" id="postnr" name="postnr" class="kort" title="het postnummer van uw gemeente" required>
+            <label class="fieldval" id="val_postnr"></label>
+        </div>
+        <div>
+            <label>Geslacht:</label>
+            <input type="radio" id="vrouw" value="v" name="sexe" title="uw geslacht" />
+            <label class="labelRadio" for="vrouw" >Vrouw</label>
+            <input type="radio" id="man" value="m" name="sexe" />
+            <label class="labelRadio" for="man" >Man</label>
+            <span class="fieldval" id="val_sexe"></span>
+        </div>
+        <div>
+            <label>Competenties</label>
+            <div class="controlbox">
+                <input type="checkbox" id="java" value="java" name="java" />
+                <label class="labelCheckbox" for="java" > Java </label><br />
+                <input type="checkbox" id="C#" value="C#" name="C#" />
+                <label class="labelCheckbox" for="C#" >C#</label><br />
+                <input type="checkbox" id="php" value="php" name="php" />
+                <label class="labelCheckbox" for="php" >PHP</label><br />
+                <input type="checkbox" id="js" value="js" name="js" />
+                <label class="labelCheckbox" for="js" >Javascript</label>
+            </div>
+        </div>
+        <div>
+<label class="labelCheckbox">
+<input type="checkbox" id="actiesmail" value name="kortingen" />
+ik wens per email op de hoogte gehouden te worden van kortingen en acties
+</label>
+</div>
+       <div>
+<label class="labelCheckbox">
+<input type="checkbox" id="actiespost" value name="actiespost" />
+ik wens per post op de hoogte gehouden te worden van kortingen en acties
+</label>
+</div>
+<div>U moet ook onze <a href="#">Algemene VerkoopsVoorwaarden</a> lezen en ermee akkoord gaan. U moet deze checkbox <input type="checkbox" class="inline" id="akkoord" value name="akkoord" /> aanvinken om toe te stemmen met de algemene verkoopsvoorwaarden.
+</div>
+        <div>
+<label for="vragen" >Hebt u nog vragen?</label>
+<textarea rows="8" id="vragen" name="vragen" placeholder="vragen?"  title="Heeft u nog vragen?" ></textarea>
+<span class="fieldval" id="val_geboren"></span>
+</div>
+    </body>
+</html>

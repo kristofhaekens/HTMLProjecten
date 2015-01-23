@@ -1,0 +1,12 @@
+table{
+table-layout:auto;
+border-collapse:collapse;
+empty-cells:show;
+}
+tr {text-align:right; vertical-align:top;}
+td, th {padding:5px 10px;}
+colgroup, tbody, thead, tfoot {border:1px solid green;}
+thead, tfoot {background-color:#66CC66;}
+colgroup#titels {width:200px;}
+colgroup#midden {width:100px;}
+colgroup#totaal {width:50px;}

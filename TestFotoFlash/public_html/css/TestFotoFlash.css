@@ -1,0 +1,109 @@
+/*************NORMALIZE***********/
+html, body, div, section, article, aside, nav {
+    margin: 5px;
+    padding: 0;
+}
+
+img {
+    border: none;
+    float: left;
+    margin: 0 1.4em 0.5em 0;
+}
+/* TYPOGRAFIE */
+body {
+    font-family: Verdana;
+    background: white;
+}
+h2 {
+    font-size: 0.75em;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+h1 {
+    padding-left:1em;
+    letter-spacing: 0.25em;
+    font-family: t;
+    font-size: 2em;
+}
+nav ul {
+    letter-spacing: 0.15em;
+}
+.bold {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+div h3 {
+    padding-left: 1em;
+    padding-bottom:0.5em;
+    width: 45em;
+    border-bottom: 1px solid cornflowerblue;
+    border-left: 35px solid cornflowerblue;
+}
+.features {
+    color: grey;
+    font-size: 0.8em;
+    list-style-image: url(img/icon-bullet.gif);
+}
+/* KLEUR */
+a {
+    color: gray;
+}
+header {
+    background-color: brown;
+    color: white;
+}
+.inhoud h3 {
+    color: cornflowerblue;
+}
+/* STRUCTUUR */
+header {
+    margin-top:-0.5em;
+}
+footer {
+    text-align: center;
+    margin: 3em;
+}
+h1 {
+    float:left;
+}
+header h2 {
+    float:left;
+    padding-top: 2.3em;
+}
+div h5 {
+    clear:both;
+}
+div ul {
+    list-style-type:none;
+}
+.camera {
+    border-bottom: 1px solid black;
+    list-style-type: none;
+}
+#intro {
+    margin-left: -2.5em;
+}
+/* HOOFDMENU */
+nav ul {
+    list-style-type: none;
+}
+
+/* SPECIALS */
+.cf {
+    clear:both;
+}
+.clearFix:before, .clearFix:after {
+    content: " ";
+    display: table;
+}
+.clearFix:after {
+    clear: both;
+}
+/* enkel voor IE6/7  */ 
+.clearFix {
+    *zoom: 1;
+}

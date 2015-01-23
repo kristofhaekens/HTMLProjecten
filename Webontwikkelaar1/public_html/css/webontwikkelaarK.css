@@ -1,0 +1,72 @@
+header {
+    background: #7ea107;
+    color: white;
+}
+.formContainer {
+    background: #7ea107;
+    color: white;
+}
+header form {
+    float:right;
+}
+#logo {
+    float:left;
+}
+#navlijst {
+    float:right;
+}
+#navlijst li {
+    display: inline;
+    margin: 0 1em;
+}
+.container  {
+    margin: 0 auto;
+    width: 80%;
+    max-width:78em;
+    position: relative;
+    clear: both;
+}
+.wikkel1 {
+    background:#EBFAF8;
+}
+.wikkel2 {
+    background:#EBE8E5;
+}
+.deel1 img {
+    float:right;
+    height:50%;
+    border:5px solid #E9DCE9;
+}
+.deel2 img {
+    float:left;
+    border: 5px solid #E9DCE9;
+    margin-top:-46px;
+    margin-right:2em;
+}
+.deel3 img {
+   float:right;
+}
+#nws_789 {
+	width:100%;
+}
+#nws_123 {
+width:33.333%;
+	padding-right:3%;
+}
+#nws_456 {
+	width:66.666%;
+	padding-right:3%;
+}
+.kolom:last-child {
+	padding-right:0;    
+}
+.clearFix:before, .clearFix:after {
+    content: " ";
+    display: table;
+}
+.clearFix:after {
+    clear: both;
+}
+.clearFix {
+    *zoom: 1;
+}

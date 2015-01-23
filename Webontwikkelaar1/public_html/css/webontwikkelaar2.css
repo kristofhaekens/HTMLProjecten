@@ -1,0 +1,530 @@
+@charset "utf-8";
+/* CSS Document voor opleidingscentrum oefening
+	
+	deel2: CSS3 en meerdere pagina's
+
+*/
+
+
+/*************NORMALIZE***********/
+
+html, body, div, section, article, aside, nav {
+	margin:0;
+	padding:0;
+}
+img {
+	border:none;
+	float:left;
+	margin: 0 1.25em 0.5em 0;
+}
+
+/***********TYPOGRAFIE***********/
+
+/*algemeen*/
+
+body {
+	font-family:"RobotoRegular", Verdana, Geneva, sans-serif;
+	font-size:100%;				/*16px*/
+	line-height:1.5em; 			/*24px*/
+}
+h1 {
+	font-family:"RobotoBold", Verdana, Geneva, sans-serif;
+	font-size:3.75em;			/*60px*/
+}
+a, a:visited, a:hover, a:active {
+	text-decoration:none;
+	font-weight:bold;
+}
+em {
+	font-style:normal;
+	font-weight:bold;
+}
+code {
+	font-family:"SourceCodeProSemibold", Courier, monospace;
+	font-size:1.25em;			/*18px*/
+}
+time {
+	font-size:0.75em;			/*12px*/
+}
+/* structuurelementen */
+.intro p {
+	font-size:1.125em;			/*18px*/
+}
+.intro h2 {
+	font-size:1.5em;			/*24px*/
+	font-family:"RobotoItalic", Verdana, Geneva, sans-serif;
+	font-style:italic;
+}
+.disclaimer {
+	font-family:"RobotoItalic", Verdana, Geneva, sans-serif;
+	font-style:italic;
+}
+/*************KLEUREN, BORDERS, HOEKEN****************/
+
+/*
+	tekstkleur: 		#665950	
+	linkKleur: 			#4C86CF
+	linkHover: 			#058
+	achtergrondBleek:  	#FCFAF8
+	achtergrondDonker: 	#EBE8E5
+	achtergrondGroen: 	#8FB209
+	borderGrijs: 		#dcdad8
+	headingGroen: 		#7ea107
+	headingDonker: 		#52463f
+	headingPaars: 		#9A3098
+	code: 				#8B1C00
+*/
+
+
+/*algemeen*/
+body {
+	color:#665950;
+	background:#FCFAF8;
+}
+h1, h2 {
+	color:#7EA107;
+}
+h3, h4, h5, h6 {
+	color:#52463F;
+}
+h2.afscheiding {
+	border-top :1px dotted #CCCAC8;
+	padding-top:1em;
+}
+.paars {
+	color:#9A3098;
+}
+a, a:visited {
+	color:#4C86CF;
+}
+a:hover, a:active {
+	color:#058;
+}
+em {
+	color:#9A3098;
+}
+code {
+	color:#8B1C00;
+}
+
+/* structuurelementen */
+header {
+	box-shadow: inset 0px 2px 4px rgba(220, 218, 216, 0.75);
+}
+.top {
+	background:#8FB209;
+}
+.top form {
+	color:white;
+}
+section {
+	border-top:1px solid #DCDAD8;
+	border-bottom:1px solid #DCDAD8;
+	box-shadow: inset 0px 2px 4px rgba(220, 218, 216, 0.75);
+}
+.licht {
+	background:#FCFAF8;
+}
+.donker {
+	background:#EBE8E5;
+}
+
+/*************STRUCTUUR****************/
+
+.inhoud {
+	margin: 0 auto;
+	width: 80%;
+	max-width:78em;
+	position: relative;
+	clear: both;
+}
+.inhoud h2 {
+	margin:1.6em 0 1em 0;
+}
+/*top*/
+.top form {
+	float:right;
+}
+/*logo*/
+#logo {
+	float:left;
+	margin:1em 0 0.5em 0;
+}
+/*intro*/
+.intro {
+	clear:left;
+	padding: 1em 0;
+}
+
+/**************KOLOMMEN: 3 kols systeem*************/
+
+.kolommen {
+	/*container */
+	clear:both;
+	margin-bottom: 2em;
+}
+.kolom {
+	float:left;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	overflow:visible;
+	margin: 0;
+	padding:0;
+}
+.span1 {
+	width:33.333%;
+	padding-right:3%;
+}	/* 1/3 + gutter rechts*/
+.span2 {
+	width:66.666%;
+	padding-right:3%;
+}
+.span3 {
+	width:100%;
+}
+.kolom:last-child {
+	padding-right:0; /*  geen gutter laatste kolom */
+}
+
+/*********** LIJSTEN  ****************/
+
+/* ul infoblokjes*/
+ul.infoblokjes {
+	font-size:0.875em;
+	list-style:square;
+	list-style-image:url(../../img/check.png);
+	margin-left:-2%;
+	margin-bottom: 2em;
+}
+ul.infoblokjes li {
+	float:left;
+	width:29%;
+	padding: 0 0 0 1%;
+	margin: 0.6em 1.5% 0 1.5%;
+	/*min-height:8em;*/
+}
+
+/* ul team */
+ul.team {
+	font-size:0.875em;  				/* 14px  */
+	list-style:none;
+	margin-left:0;
+	margin-bottom: 2em;
+}
+ul.team li {
+	float:left;
+	box-sizing:border-box;
+	width:19%;
+	padding: 0 0 0 0;
+	margin: 2em 3% 0 3%;
+	min-height:8em;
+}
+ul.team figure {
+	display:inline;
+	margin:0;
+	padding:0;
+}
+ul.team figure figcaption {
+	clear:both;
+}
+ul.team li:nth-child(odd) {
+	text-align:right;
+}
+ul.team li:nth-child(even) {
+	text-align:left;
+}
+ul.team li:nth-child(odd) img {
+	-webkit-transform: rotate(-6deg);
+	-moz-transform: rotate(-6deg);
+	-o-transform: rotate(-6deg);
+	transform: rotate(-6deg);
+}
+ul.team li:nth-child(even) img {
+	-webkit-transform: rotate(8deg);
+	-moz-transform: rotate(8deg);
+	-o-transform: rotate(8deg);
+	transform: rotate(8deg);
+}
+
+/*ol.adres*/
+ol.adres {
+	list-style-type:none;
+}
+ol.adres a {
+	color:inherit;
+}
+
+/*******************ARTICLES*********************/
+article h3 {
+	margin-top:0.1em;
+}
+
+
+/*****************HOOFDMENU**************************/
+
+#hoofdmenu {
+	float:right;
+	margin-top:70px;
+}
+#hoofdmenu ul {
+	list-style-type:none;
+}
+#hoofdmenu ul li {
+	float:left;
+	display:inline;
+}
+#hoofdmenu a {
+	font-weight:bold;
+	color:#6C6A68;
+	text-align:center;
+	display:inline-block;
+	padding-left:1em;
+	padding-right:1em;
+	border-right:1px solid #ECEAE8;
+}
+#hoofdmenu li:last-child a {
+	border-right:none;
+}
+#hoofdmenu li.huidig a {
+	color:#4C4A48;
+}
+#hoofdmenu a:hover {
+	color:#2B518A;
+}
+
+
+/************** FIGUREN ***************/
+
+/*images in bepaalde  secties */
+#intro img {
+	margin-top:0px;
+	margin-right:80px;
+}
+#waarom img {
+	margin-top:-46px;
+	margin-right:2em;
+}
+#nieuws img {
+}
+
+/* pics op contact pagina */
+/* dit element zou een echte Google map bevatten, hier een dummy image als bg*/
+#gmap {
+	width:100%;
+	height:600px;
+	background:transparent url(../../img/gmap.png) no-repeat top left;
+	border:1px solid silver;
+	margin-bottom:2em;
+}
+.pic{
+	float:left;	
+	}
+#pic1{
+	width:48%;
+	height:400px;
+	background: transparent url(../../img/env1.jpg) no-repeat -200px -100px;
+	margin:0 10px 10px 0;
+	}
+#pic4{
+	width:48%;
+	height:400px;
+	background: transparent url(../../img/env4.jpg) no-repeat top left;
+	margin:0 0 10px 0;
+	}
+#pic2{
+	width:30%;
+	height:190px;
+	background: transparent url(../../img/env2.jpg) no-repeat top left;
+	margin:0 10px 10px 0;
+	}
+#pic3{
+	width:66%;
+	height:190px;
+	background: transparent url(../../img/env3.jpg) no-repeat ;
+	top:-160px;
+	left:20px;
+	margin:0 0 10px 0;
+	}
+
+/************PURE OPMAAK CLASSES ***************/
+
+.rand {
+	border:8px solid #E9DCE9;
+}
+
+.vlotRechts {
+	float:right;
+}
+.roteerSkewRechts {
+	-webkit-transform: rotate(12deg) skewY(-8deg);
+	-moz-transform: rotate(12deg) skewY(-8deg);
+	-o-transform: rotate(12deg) skewY(-8deg);
+	transform: rotate(12deg) skewY(-8deg);
+}
+.roteerLinks {
+	-webkit-transform: rotate(-6deg);
+	-moz-transform: rotate(-6deg);
+	-o-transform: rotate(-6deg);
+	transform: rotate(-6deg);
+}
+.roteerRechts {
+	-webkit-transform: rotate(8deg);
+	-moz-transform: rotate(8deg);
+	-o-transform: rotate(8deg);
+	transform: rotate(8deg);
+}
+.dikkeSchaduw {
+	-webkit-box-shadow: rgba(0,0,0,0.3) 10px 10px 10px 10px;
+	-moz-box-shadow: rgba(0,0,0,0.3) 10px 10px 10px 10px;
+	-o-box-shadow: rgba(0,0,0,0.3) 10px 10px 10px 10px;
+	box-shadow: rgba(0,0,0,0.3) 10px 10px 10px 10px;
+	border:8px solid #E9DCE9;
+}
+.dunneSchaduw {
+	-webkit-box-shadow: rgba(0,0,0,0.2) 6px 6px 6px 6px;
+	-moz-box-shadow: rgba(0,0,0,0.4) 6px 6px 6px 6px;
+	-o-box-shadow: rgba(0,0,0,0.4) 6px 6px 6px 6px;
+	box-shadow: rgba(0,0,0,0.2) 6px 6px 6px 6px;
+	border:6px solid #E9DCE9;
+}
+
+/**************** FORMS *******************/
+
+.top form input[type=submit] {
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+	width: auto;
+	background-color: #6D9207;
+	border: 1px solid #047B00;
+	padding: 0.2em 1em;
+	overflow: visible;
+}
+/* contact form */
+
+form.contact {
+	margin-bottom:1em;
+}
+form.contact div {
+	position:relative;
+	clear: left;
+	display: block;
+	zoom: 1;
+	margin: 0.3em 0 0 0;
+	padding: 0.1em 0.2em;
+}
+/*velden, controls*/
+form.contact input[type="email"], form.contact input[type="password"], form.contact input[type="text"], form.contact input[type="url"], form.contact input[type="search"], form.contact input[type="number"], form.contact input[type="tel"], form.contact textarea {
+	width: 40%;
+	border: 1px solid #999;
+	min-height: 0.875em;
+	padding: 0.4em 0.5em;
+}
+form.contact input[type="checkbox"], input[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+form.contact select {
+	border: 1px solid #999;
+	padding: 0.2em 0.5em;
+	min-width:7em;
+}
+form.contact textarea {
+	overflow:auto;
+	vertical-align:top;
+	min-height:7em;
+}
+form.contact label {
+	/*labels in form lay-out*/ 	
+	float:left;
+	display: block;
+	position:relative;
+	width: 20%;
+	margin:0;
+	padding:0.3em 0;
+	min-height: 0.875em;			/*14px*/
+	text-align: left;
+}
+form.contact label.labelCheckbox, form.contact label.labelRadio {
+	float: none;
+	display: inline;
+	zoom: 1;
+	padding: 0;
+	text-align: left;
+}
+form.contact span.fieldval {
+	display:inline-block;
+	float:right;
+	max-width:35%;
+	color: red;
+	font-style: italic
+}
+form.contact div.error {
+	display: none;
+}
+/* gekleurde buttons*/	
+form.contact input[type="submit"] {
+	display: inline-block;
+	padding: 0.5em 1.2em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;			/*16px*/
+	font-weight: bold;
+	color: white;
+	text-transform: uppercase;
+	text-align: center;
+	background-color:#a0c33f;
+	margin-right:2em;
+	box-shadow:rgba(0,0,0,0.2) 0 1px 2px;
+}
+form.contact input[type="submit"]:hover, form.contact input[type="submit"]:active {
+	background-color:#91b137;
+}
+
+/****************SPECIALS*********************/
+
+.cf {
+	clear:both;
+}
+.clearFix:before, .clearFix:after {
+	content: " ";
+	display: table;
+}
+.clearFix:after {
+	clear: both;
+}
+/* enkel voor IE6/7  */ 
+.clearFix {
+ *zoom: 1;
+}
+
+/****************WEBFONTS**********************/
+
+@font-face {
+	font-family: 'RobotoRegular';
+	src: url('../../webfonts/Roboto-Regular-webfont.eot');
+	src: url('../../webfonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('../../webfonts/Roboto-Regular-webfont.woff') format('woff'), url('../../webfonts/Roboto-Regular-webfont.ttf') format('truetype'), url('../../webfonts/Roboto-Regular-webfont.svg#RobotoRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'RobotoItalic';
+	src: url('../../webfonts/Roboto-Italic-webfont.eot');
+	src: url('../../webfonts/Roboto-Italic-webfont.eot?#iefix') format('embedded-opentype'), url('../../webfonts/Roboto-Italic-webfont.woff') format('woff'), url('../../webfonts/Roboto-Italic-webfont.ttf') format('truetype'), url('../../webfonts/Roboto-Italic-webfont.svg#RobotoItalic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'RobotoBold';
+	src: url('../../webfonts/Roboto-Bold-webfont.eot');
+	src: url('../../webfonts/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('../../webfonts/Roboto-Bold-webfont.woff') format('woff'), url('../../webfonts/Roboto-Bold-webfont.ttf') format('truetype'), url('../../webfonts/Roboto-Bold-webfont.svg#RobotoBold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'SourceCodeProSemibold';
+	src: url('../../webfonts/SourceCodePro-Semibold-webfont.eot');
+	src: url('../../webfonts/SourceCodePro-Semibold-webfont.eot?#iefix') format('embedded-opentype'), url('../../webfonts/SourceCodePro-Semibold-webfont.woff') format('woff'), url('../../webfonts/SourceCodePro-Semibold-webfont.ttf') format('truetype'), url('../../webfonts/SourceCodePro-Semibold-webfont.svg#SourceCodeProSemibold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+/* TYPOGRAFIE */
+
+
+
+/* KLEUREN */
+
+.wikkel1 {
+    background-color: #FCFAF8;    
+    border-top:1px solid #DCDAD8;
+    border-bottom:1px solid #DCDAD8;
+}
+.wikkel2 {
+    background-color: #EBE8E5;    
+    border-top:1px solid #DCDAD8;
+    border-bottom:1px solid #DCDAD8;
+}
+header {
+    background: #7ea107;
+    color: white;
+}
+h1, h2 {
+    color:#7EA107;
+}
+h3, h4, h5, h6 {
+    color:#52463F;
+}
+#deel1 h2 {
+    color:#7EA107;
+}
+
+/* STRUCTUUR */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+form {
+    float:right;
+}
+nav img {
+    margin:1em 0 0.5em 0;
+}
+nav ul {
+    float: right;
+    margin-top:-100px;
+}
+nav ul li {
+    display: inline;
+    margin: 0 1em;
+}
+#deel1 img {
+    float: right;
+    border: 5px solid #E9DCE9;
+}
+#deel2 img {
+    float: left;
+    
+}
+#deel3 img {
+    float: right;
+    border: 5px solid #E9DCE9;
+}
+#nws_123 {
+    float:left;
+    width:30%;
+}
+#nws_456 {
+    float:left;
+    width:30%;
+}
+#nws_789 {
+    float:left;
+    width:30%;
+}
+
+/* SPECIALS */
+
+.cf {
+    clear:both;
+}
+.clearFix:before, .clearFix:after {
+    content: " ";
+    display: table;
+}
+.clearFix:after {
+    clear: both;
+}
+/* enkel voor IE6/7  */ 
+.clearFix {
+    *zoom: 1;
+}

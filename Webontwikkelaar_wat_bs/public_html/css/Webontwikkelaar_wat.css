@@ -1,0 +1,11 @@
+section:nth-child(odd), header, footer {
+background-color :#dff0d8;
+border-top :#d6e9c6;
+border-bottom :#d6e9c6;
+}
+.navbar-brand {padding-top:10px; padding-bottom:10px } /* vdab_60 logo is te hoog */
+.navbar { margin-bottom:0 }
+h2 .glyphicon {
+    font-size: 0.8em;
+    margin-right: 0.4em;
+}
